@@ -14,11 +14,11 @@ use App\Http\Controllers\Api\AttendanceController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 
-Route::get('/home',[AttendanceController::class,'home'])->name('home');
+Route::get('/',[AttendanceController::class,'home'])->name('home');
 
 Route::get('/create',[AttendanceController::class,'createRandom']);
