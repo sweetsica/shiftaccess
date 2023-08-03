@@ -46,7 +46,6 @@ class AttendanceController extends Controller
         dump($token);
         dump($status);
         dd($request);
-
 //        return view('home');
     }
 }

@@ -23,4 +23,4 @@ Route::get('/',[AttendanceController::class,'home'])->name('home');
 
 Route::get('/create',[AttendanceController::class,'createRandom']);
 
-Route::get('/{departmentName?}/{userID?}/{token?}/{status?}',[AttendanceController::class,'checkIn']);
+Route::get('/checkin/{departmentName?}/{userID?}/{token?}/{status?}',[AttendanceController::class,'checkIn']);
