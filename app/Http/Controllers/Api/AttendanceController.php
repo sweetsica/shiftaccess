@@ -41,6 +41,11 @@ class AttendanceController extends Controller
 
     public function checkIn(Request $request, $departmentName =0, $userID=0, $token=0, $status=0)
     {
+        dump($departmentName);
+        dump($userID);
+        dump($token);
+        dump($status);
+        dump($request);
 
         return view('home');
     }
