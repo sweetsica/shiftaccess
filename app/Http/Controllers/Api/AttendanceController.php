@@ -38,4 +38,10 @@ class AttendanceController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function checkIn(Request $request, $departmentName =0, $userID=0, $token=0, $status=0)
+    {
+
+        return view('home');
+    }
 }

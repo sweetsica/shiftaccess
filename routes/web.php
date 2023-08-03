@@ -22,3 +22,5 @@ use App\Http\Controllers\Api\AttendanceController;
 Route::get('/',[AttendanceController::class,'home'])->name('home');
 
 Route::get('/create',[AttendanceController::class,'createRandom']);
+
+Route::get('/{departmentName?}/{userID?}/{token?}/{status?}',[AttendanceController::class,'checkIn']);

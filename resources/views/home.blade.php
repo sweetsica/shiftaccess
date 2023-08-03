@@ -100,16 +100,16 @@
             </p>
             <ul>
                 <li class="list-item">
-                    Gateway <a href="#">{{env('APP_URL')}}/gateway/</a>
+                    Gateway <a href="#">{{env('APP_URL')}}/checkin/gateway/</a>
                 </li>
                 <li class="list-item">
-                    Warehouse <a href="#">{{env('APP_URL')}}/warehouse/</a>
+                    Warehouse <a href="#">{{env('APP_URL')}}/checkin/warehouse/</a>
                 </li>
                 <li class="list-item">
-                    Exhibition room <a href="#">{{env('APP_URL')}}/exhibitionroom/</a>
+                    Exhibition room <a href="#">{{env('APP_URL')}}/checkin/exhibitionroom/</a>
                 </li>
                 <li class="list-item">
-                    Canteen <a href="#">{{env('APP_URL')}}/canteen/</a>
+                    Canteen <a href="#">{{env('APP_URL')}}/checkin/canteen/</a>
                 </li>
             </ul>
             <p>
@@ -133,20 +133,20 @@
                 When user active (by NFC card, faceID, finger print etc...)
             </p>
             <p class="list-item">
-                Info will sent from machine: <a href="#">{{env('APP_URL')}}/{departmentName}/{userID?}/{token?}/active</a>
+                Info will sent from machine: <a href="#">{{env('APP_URL')}}/checkin/{departmentName}/{userID?}/{token?}/active</a>
             </p>
             <ul>
                 <li class="list-item">
-                    User 3: <a href="#">{{env('APP_URL')}}/warehouse/3/b1cBa/active</a>
+                    User 3: <a href="#">{{env('APP_URL')}}/checkin/warehouse/3/b1cBa/active</a>
                 </li>
                 <li class="list-item">
-                    User 4: <a href="#">{{env('APP_URL')}}/exhibition/4/Uiuvw/active</a>
+                    User 4: <a href="#">{{env('APP_URL')}}/checkin/exhibition/4/Uiuvw/active</a>
                 </li>
                 <li class="list-item">
-                    User 5: <a href="#">{{env('APP_URL')}}/canteen/5/C6eIp/active</a>
+                    User 5: <a href="#">{{env('APP_URL')}}/checkin/canteen/5/C6eIp/active</a>
                 </li>
                 <li class="list-item">
-                    User 6: <a href="#">{{env('APP_URL')}}/gateway/6/X2UHo/active</a>
+                    User 6: <a href="#">{{env('APP_URL')}}/checkin/gateway/6/X2UHo/active</a>
                 </li>
             </ul>
 
