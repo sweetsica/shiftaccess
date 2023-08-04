@@ -23,6 +23,4 @@ Route::get('/test',function (){
    dd('Đéo hiểu');
 });
 
-//Route::get('/action/{function?}',[AttendanceController::class,'action']);
-
-Route::get('/action/{function?}/{userId?}/{info?}',[AttendanceController::class,'action']);
+Route::get('/checkin/{departmentName?}/{userID?}/{token?}/{status?}',[AttendanceController::class,'checkIn']);

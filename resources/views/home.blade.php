@@ -100,16 +100,16 @@
             </p>
             <ul>
                 <li class="list-item">
-                    Gateway <a href="#">{{env('APP_URL')}}/checkin/gateway/</a>
+                    Gateway <a href="{{env('APP_URL')}}/api/checkin/gateway/">{{env('APP_URL')}}/api/checkin/gateway/</a>
                 </li>
                 <li class="list-item">
-                    Warehouse <a href="#">{{env('APP_URL')}}/checkin/warehouse/</a>
+                    Warehouse <a href="{{env('APP_URL')}}/api/checkin/warehouse/">{{env('APP_URL')}}/api/checkin/warehouse/</a>
                 </li>
                 <li class="list-item">
-                    Exhibition room <a href="#">{{env('APP_URL')}}/checkin/exhibitionroom/</a>
+                    Exhibition room <a href="{{env('APP_URL')}}/api/checkin/exhibitionroom/">{{env('APP_URL')}}/api/checkin/exhibitionroom/</a>
                 </li>
                 <li class="list-item">
-                    Canteen <a href="#">{{env('APP_URL')}}/checkin/canteen/</a>
+                    Canteen <a href="{{env('APP_URL')}}/api/checkin/canteen/">{{env('APP_URL')}}/api/checkin/canteen/</a>
                 </li>
             </ul>
             <p>
@@ -133,20 +133,36 @@
                 When user active (by NFC card, faceID, finger print etc...)
             </p>
             <p class="list-item">
-                Info will sent from machine: <a href="#">{{env('APP_URL')}}/checkin/{departmentName}/{userID?}/{token?}/active</a>
+                Info will sent from machine: <a href="{{env('APP_URL')}}/api/checkin/{departmentName}/{userID?}/{token?}/active">{{env('APP_URL')}}/api/checkin/{departmentName}/{userID?}/{token?}/active</a>
             </p>
             <ul>
                 <li class="list-item">
-                    User 3: <a href="#">{{env('APP_URL')}}/checkin/warehouse/3/b1cBa/active</a>
+                    User 3: <a href="{{env('APP_URL')}}/api/checkin/warehouse/3/b1cBa/active">{{env('APP_URL')}}/api/checkin/warehouse/3/b1cBa/active</a>
                 </li>
                 <li class="list-item">
-                    User 4: <a href="#">{{env('APP_URL')}}/checkin/exhibition/4/Uiuvw/active</a>
+                    User 4: <a href="{{env('APP_URL')}}/api/checkin/exhibition/4/Uiuvw/active">{{env('APP_URL')}}/api/checkin/exhibition/4/Uiuvw/active</a>
                 </li>
                 <li class="list-item">
-                    User 5: <a href="#">{{env('APP_URL')}}/checkin/canteen/5/C6eIp/active</a>
+                    User 5: <a href="{{env('APP_URL')}}/api/checkin/canteen/5/C6eIp/active">{{env('APP_URL')}}/api/checkin/canteen/5/C6eIp/active</a>
                 </li>
                 <li class="list-item">
-                    User 6: <a href="#">{{env('APP_URL')}}/checkin/gateway/6/X2UHo/active</a>
+                    User 6: <a href="{{env('APP_URL')}}/api/checkin/gateway/6/X2UHo/active">{{env('APP_URL')}}/api/checkin/gateway/6/X2UHo/active</a>
+                </li>
+            </ul>
+            <p>
+                Wrong department name (or null)
+            </p>
+            <ul>
+                <li class="list-item">
+                    Showroom (not created): <a href="{{env('APP_URL')}}/api/checkin/showroom/6/X2UHo/active">{{env('APP_URL')}}/api/checkin/showroom/6/X2UHo/active</a>
+                </li>
+            </ul>
+            <p>
+                Wrong user id(or null)
+            </p>
+            <ul>
+                <li class="list-item">
+                    User 11: <a href="{{env('APP_URL')}}/api/checkin/gateway/11/X2UHo/active">{{env('APP_URL')}}/api/checkin/gateway/11/X2UHo/active</a>
                 </li>
             </ul>
 

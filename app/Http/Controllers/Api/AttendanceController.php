@@ -11,7 +11,6 @@ use Faker\Factory;
 
 class AttendanceController extends Controller
 {
-
     public function action(Request $request, $function =0, $userId=0, $info=0)
     {
         dump($function);
@@ -41,11 +40,32 @@ class AttendanceController extends Controller
 
     public function checkIn(Request $request, $departmentName =0, $userID=0, $token=0, $status=0)
     {
-        dump($departmentName);
-        dump($userID);
-        dump($token);
-        dump($status);
-        dd($request);
-//        return view('home');
+        $data = Member::find($userID);
+        if($data){
+            if ($departmentName == 'gateway'){
+                $data =['messenger'=>'Allow access Gateway!',
+                    'status'=>'true',];
+                return response()->json($data,200);
+            }else {
+                $departmentId = $data['departmentId'];
+                if ($departmentId%2==0 && $departmentName=='exhibition') {
+                    $data =['messenger'=>'Allow access Exhibition!',
+                        'status'=>'true',];
+                    return response()->json($data,200);
+                }elseif(($departmentId%2!=0 && $departmentName=='warehouse')){
+                    $data =['messenger'=>'Allow access Warehouse!',
+                        'status'=>'true',];
+                    return response()->json($data,200);
+                }else {
+                    $data =['messenger'=>'Deny access '.$departmentName.'!',
+                        'status'=>'false',];
+                    return response()->json($data,403);
+                }
+            }
+        }else{
+            $data =['messenger'=>"Deny access! Stop right there.",
+                'status'=>'false',];
+            return response()->json($data,403);
+        }
     }
 }

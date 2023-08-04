@@ -10,4 +10,9 @@ class Member extends Model
     use HasFactory;
 
     protected $guarded = [''];
+    public function department()
+    {
+        return $this->hasOne(Department::class,'id');
+
+    }
 }
